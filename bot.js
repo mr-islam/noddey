@@ -16,7 +16,7 @@ const question1 = () => {
     rl.question('Hi, my name is Noddy… whats ur name? ', (answer) => {
 	  var userName = answer;
       console.log(`Very nice to meet you, ${answer}. Let's talk: `)
-      resolve()
+      resolve();
     })
   })
 }
@@ -40,13 +40,13 @@ const question2 = () => {
 						case 'dont':
 						case "don't":
 							console.log(`Noddey: I don't like ${lastWord} either!`);
-							main();
+							talk();
 							break;
 						case 'favorite':
 						case 'tastiest':
 						case 'like':
-							console.log('Noddey: My favorite food is lasagna!');
-							main();
+							console.log('Noddey: My favorite food is lasagna,'+userName+'!');
+							talk();
 							break;
 					}	
 				}
@@ -60,7 +60,7 @@ const question2 = () => {
 			case 'hockey':
 				console.log(`Noddey: I don't really like ${answerArray[i]}, I'm a squash person—`);
 				console.log('Noddey: The sport, not the vegetable!');
-				main();
+				talk();
 				break;
 			case 'movie':
 			case 'film':
@@ -68,11 +68,16 @@ const question2 = () => {
 			case 'movies':
 			case 'cinema':
 				console.log(`Noddey: I love the Matrix! ${lastWord} is pretty good movie too`);
-				main();
+				talk();
 				break;
 			default:
+				let randomChoice = Math.random();
 				if (i == 0) {
-					console.log(`${lastWord} to you too :P`);
+					if (randomChoice < 0.5) {
+						console.log(`${lastWord} to you too :P`);
+					} else {
+						console.log(`What do you mean by ${lastWord}?`);
+					}
 				}
       	}
 	}
@@ -82,14 +87,15 @@ const question2 = () => {
   })
 }
 
-const introduce = async () => {
-  await question1()
-  await sleep(2000)
-  main();
-}
-const main = async () => {
-  await question2()
-  rl.close()
+const intro = async () => {
+  await question1();
+  talk();
 }
 
-introduce();
+const talk = async () => {
+  await sleep(1000);
+  await question2();
+  rl.close();
+}
+
+intro();
