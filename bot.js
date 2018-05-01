@@ -72,13 +72,34 @@ const question2 = () => {
 				break;
 			default:
 				let randomChoice = Math.random();
-				if (i == 0) {
-					if (randomChoice < 0.5) {
+				if (i == 0) { 	// if i==0, that means it has finished parsing all the other words;
+								// ie. this will only be called when no other word matches any entry from above
+								// otherwise, it would run one of the above outputs, and if no match, then it ran
+								// this for each word. 
+					if (randomChoice < 0.1) {
 						console.log(`${lastWord} to you too :P`);
-					} else {
+					} else if (randomChoice < 0.2) {
 						console.log(`What do you mean by ${lastWord}?`);
+					} else if (randomChoice < 0.3) {
+						console.log(`"${lastWord}"? Sounds cool!`);
+					} else if (randomChoice < 0.5) {
+						console.log(`Can you teach me about ${lastWord}, please?`);
+					} else if (randomChoice < 0.6) {
+						console.log(`What does ${lastWord} mean?`);
+					} else if (randomChoice < 0.7) {
+						console.log(`Very ${lastWord}, or super ${lastWord}?`);
+					} else if (randomChoice < 0.8) {
+						console.log(`Would ${lastWord} be good on pizza?`);
+					} else if (randomChoice < 0.8) {
+						console.log(`Let's discuss ${lastWord} over dinner.`);
+					} else if (randomChoice < 0.9) {
+						console.log(`My mom told me not to talk about ${lastWord}……`);
+					} else {
+						console.log(`${lastWord}? Sounds funny lol`);
 					}
-				}
+				} //alternate method: whole ints 1-10, starting at randomint initialized at startup
+					// then, cycles through each entry by int+1, preventing duplicates
+					// but bringing predicatble flow. Testing going on for randomness of random above
       	}
 	}
 	
