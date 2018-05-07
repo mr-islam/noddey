@@ -6,4 +6,10 @@ Kind of a scrappy logic that won't scale well to anyhting beyond it's current sc
 
 Currently only food based conversations are supported, but the groundwork has been laid to support *anything*
 
-Longer article coming soon as a reflection on the process and code.
+## Install
+
+1. Install node on your system
+2. Install the dependencies `readline` & `chalk`
+3. Clone this repo
+4. `cd` to that folder on your terminal, and run `node bot.js`
+5. Finally, enjoy some company more engaging than this readme
