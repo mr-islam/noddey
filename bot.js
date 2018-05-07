@@ -40,6 +40,9 @@ const question2 = () => {
       		case 'meal':
       		case 'eat':
       		case 'eating':
+      		case 'dinner':
+      		case 'lunch':
+      		case 'breakfast':
 				console.log(chalk.blue('Noddey: ')+ 'My favorite food is lasagna!');
 				question2();
 				break;
@@ -51,6 +54,9 @@ const question2 = () => {
 			case 'badminton':
 			case 'hockey':
 			case 'tennis':
+			case 'pingpong':
+			case 'pool':
+			case 'swimming':
 				console.log(chalk.blue('Noddey: ')+`I don't really like ${answerArray[i]}, I'm a squash person`);
 				question2();
 				break;
@@ -59,6 +65,8 @@ const question2 = () => {
 			case 'films':
 			case 'movies':
 			case 'cinema':
+			case 'theater':
+			case 'theatre':
 				console.log(chalk.blue('Noddey: ')+`I love the Matrix!`);
 				question2();
 				break;
@@ -91,6 +99,7 @@ const question2 = () => {
 			case 'sleeping':
 			case 'hobby':
 			case 'drawing':
+			case 'gaming':
 				console.log(chalk.blue('Noddey: ')+`My hobby is to sleep :D`);
 				question2();
 				break;	
