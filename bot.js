@@ -29,9 +29,10 @@ const question2 = () => {
     
     rl.question(`\nYou: `, (answer) => {
       let answerArray = answer.split(" ");
-      for (var i = answerArray.length - 1; i >= 0; i--) {
+      for (var i = 0; i <= answerArray.length; i++) {
       	let lastWord = '';
 		lastWord = answerArray[answerArray.length - 1];
+
 
       	switch(answerArray[i]) { //favorite finder
       		case 'food':
@@ -77,10 +78,20 @@ const question2 = () => {
 			case "don't":
 				console.log(`Noddey: I don't like ${lastWord} either!`);
 				question2();
-				break;		
-				
+				break;
+			case 'love':
+			case 'adore':
+			case 'favorite':
+				favoriteThing = lastWord;
+				console.log("Noddey: I feel like we're getting close already!")	
+				question2();
+				break;
+			case 'like':
+				console.log(`I've been kind of depressed lately...`);
+				question2();
+				break;
 			default:
-				if (i == 0) { 	
+				if (i == answerArray.length - 1) { 	
 				/* if i==0, that means it has finished parsing all the other words;
 				ie. this will only be called when no other word matches any entry from above
 				otherwise, it would run one of the above outputs, and if no match, then it ran
@@ -88,7 +99,11 @@ const question2 = () => {
 
 					switch (randomChoice) {
 						case 1:
-							console.log(`Noddey: ${lastWord} to you too :P`);
+							if (favoriteThing != null) {
+								console.log(`Noddey: Think happy thoughts... like ${favoriteThing}`)
+							} else {
+								console.log(`Noddey: ${lastWord} to you too :P`);
+							}
 							randomChoice += 1;
 							break;
 						case 2:
@@ -108,7 +123,11 @@ const question2 = () => {
 							randomChoice += 1;
 							break;
 						case 6:
-							console.log(`Noddey: Very ${lastWord}, or super ${lastWord}?`);
+							if (favoriteThing != null) {
+								console.log(`Noddey: Don't be like that; remember you like ${favoriteThing}!`);
+							} else {
+								console.log(`Noddey: Very ${lastWord}, or super ${lastWord}?`);
+							}
 							randomChoice += 1;
 							break;
 						case 7:
@@ -136,6 +155,8 @@ const question2 = () => {
     })
   })
 }
+
+var favoriteThing = null;
 
 const intro = async () => {
   await question1();
