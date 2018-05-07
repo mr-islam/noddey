@@ -82,6 +82,15 @@ const question2 = () => {
 				console.log(`Noddey: I'm feeling melancholic…… :|`);
 				question2();
 				break;	
+			case 'reading':
+			case 'dancing':
+			case 'playing':
+			case 'watching':
+			case 'sleeping':
+			case 'hobby':
+				console.log(`Noddey: My hobby is to sleep :D`);
+				question2();
+				break;	
 			case 'hate':
 			case 'dont':
 			case "don't":
