@@ -109,9 +109,11 @@ const question2 = () => {
 				/* if i==0, that means it has finished parsing all the other words;
 				ie. this will only be called when no other word matches any entry from above
 				otherwise, it would run one of the above outputs, and if no match, then it ran
-				this for each word. */
+				this for that statement */
 
 					switch (randomChoice) {
+						/* this is called 'random' choice but it is actually cycling through it
+						so that the user really won't ever get a repeated response */
 						case 1:
 							if (favoriteThing != null) {
 								console.log(`Noddey: Think happy thoughts... like ${favoriteThing}`)
