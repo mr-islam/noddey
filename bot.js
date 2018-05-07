@@ -49,7 +49,8 @@ const question2 = () => {
 						case 'favorite':
 						case 'tastiest':
 						case 'like':
-							console.log('Noddey: My favorite food is lasagna,'+userName+'!');
+						default:
+							console.log('Noddey: My favorite food is lasagna!');
 							talk();
 							break;
 					}	
@@ -62,6 +63,7 @@ const question2 = () => {
 			case 'cricket':
 			case 'badminton':
 			case 'hockey':
+			case 'tennis':
 				console.log(`Noddey: I don't really like ${answerArray[i]}, I'm a squash person`);
 				question2();
 				break;
@@ -70,9 +72,23 @@ const question2 = () => {
 			case 'films':
 			case 'movies':
 			case 'cinema':
-				console.log(`Noddey: I love the Matrix! ${lastWord} is pretty good movie too`);
+				console.log(`Noddey: I love the Matrix!`);
 				question2();
 				break;
+			case 'color':
+			case 'red':
+			case 'blue':
+			case 'green':
+			case 'yellow':
+			case 'purple':
+			case 'magenta':
+			case 'white':
+			case 'black':
+				console.log(`Noddey: My favorite color is cyan! But ${answerArray[i]} is nice!`);
+				question2();
+				break;
+					}	
+				}
 			default:
 				if (i == 0) { 	
 				/* if i==0, that means it has finished parsing all the other words;
@@ -81,48 +97,44 @@ const question2 = () => {
 				this for each word. */
 
 					switch (randomChoice) {
-						/*//alternate method: whole ints 1-10, starting at randomint initialized at startup
-					// then, cycles through each entry by int+1, preventing duplicates
-					// but bringing predicatble flow. Testing going on for randomness of random above 
-						*/
 						case 1:
-							console.log(`${lastWord} to you too :P`);
+							console.log(`Noddey: ${lastWord} to you too :P`);
 							randomChoice += 1;
 							break;
 						case 2:
-							console.log(`What do you mean by ${lastWord}?`);
+							console.log(`Noddey: What do you mean by ${lastWord}?`);
 							randomChoice += 1;
 							break;
 						case 3:
-							console.log(`"${lastWord}"? Sounds cool!`);
+							console.log(`Noddey: "${lastWord}"? Sounds cool!`);
 							randomChoice += 1;
 							break;
 						case 4:
-							console.log(`Can you teach me about ${lastWord}, please?`);
+							console.log(`Noddey: Can you teach me about ${lastWord}, please?`);
 							randomChoice += 1;
 							break;
 						case 5:
-							console.log(`Do you think about ${lastWord} a lot?`);
+							console.log(`Noddey: Do you think about ${lastWord} a lot?`);
 							randomChoice += 1;
 							break;
 						case 6:
-							console.log(`Very ${lastWord}, or super ${lastWord}?`);
+							console.log(`Noddey: Very ${lastWord}, or super ${lastWord}?`);
 							randomChoice += 1;
 							break;
 						case 7:
-							console.log(`Would ${lastWord} be good on pizza?`);
+							console.log(`Noddey: Would ${lastWord} be good on pizza?`);
 							randomChoice += 1;
 							break;
 						case 8:
-							console.log(`Let's discuss ${lastWord} over dinner.`);
+							console.log(`Noddey: Let's discuss ${lastWord} over dinner.`);
 							randomChoice += 1;
 							break;
 						case 9:
-							console.log(`My mom told me not to talk about ${lastWord}……`);
+							console.log(`Noddey: My mom told me not to talk about ${lastWord}……`);
 							randomChoice += 1;
 							break;
 						case 10:
-							console.log(`${lastWord}? Sounds funny lol`); 
+							console.log(`Noddey: ${lastWord}? Sounds funny lol`); 
 							randomChoice = 1;
 							break;
 						}
@@ -130,15 +142,15 @@ const question2 = () => {
       	}
 	}
 	
-	question2();
+	question2(); //serves as a re-loop for switch (randomChoice)
     })
   })
 }
 
 const intro = async () => {
   await question1();
-  talk();
   await sleep(1000);
+  talk();
 }
 
 const talk = async () => {
