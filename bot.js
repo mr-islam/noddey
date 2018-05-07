@@ -38,6 +38,7 @@ const question2 = () => {
       		case 'dish':
       		case 'meal':
       		case 'eat':
+      		case 'eating':
 				console.log('Noddey: My favorite food is lasagna!');
 				question2();
 				break;
@@ -88,12 +89,14 @@ const question2 = () => {
 			case 'watching':
 			case 'sleeping':
 			case 'hobby':
+			case 'drawing':
 				console.log(`Noddey: My hobby is to sleep :D`);
 				question2();
 				break;	
 			case 'hate':
 			case 'dont':
 			case "don't":
+			case 'dislike':
 				console.log(`Noddey: I don't like ${lastWord} either!`);
 				question2();
 				break;
@@ -151,7 +154,7 @@ const question2 = () => {
 							randomChoice += 1;
 							break;
 						case 8:
-							console.log(`Noddey: Let's discuss ${lastWord} over dinner.`);
+							console.log(`Noddey: Let's discuss ${favoriteThing} over dinner instead.`);
 							randomChoice += 1;
 							break;
 						case 9:
