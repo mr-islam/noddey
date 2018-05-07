@@ -1,6 +1,7 @@
 'use strict'
 
-const readline = require('readline')
+const readline = require('readline');
+const chalk = require('chalk');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -27,7 +28,7 @@ const question1 = () => {
 const question2 = () => {
   return new Promise((resolve, reject) => {
     
-    rl.question(`\nYou: `, (answer) => {
+    rl.question(chalk.cyan(`\nYou: `), (answer) => {
       let answerArray = answer.split(" ");
       for (var i = 0; i <= answerArray.length; i++) {
       	let lastWord = '';
@@ -39,7 +40,7 @@ const question2 = () => {
       		case 'meal':
       		case 'eat':
       		case 'eating':
-				console.log('Noddey: My favorite food is lasagna!');
+				console.log(chalk.blue('Noddey: ')+ 'My favorite food is lasagna!');
 				question2();
 				break;
 			case 'football':
@@ -50,7 +51,7 @@ const question2 = () => {
 			case 'badminton':
 			case 'hockey':
 			case 'tennis':
-				console.log(`Noddey: I don't really like ${answerArray[i]}, I'm a squash person`);
+				console.log(chalk.blue('Noddey: ')+`I don't really like ${answerArray[i]}, I'm a squash person`);
 				question2();
 				break;
 			case 'movie':
@@ -58,7 +59,7 @@ const question2 = () => {
 			case 'films':
 			case 'movies':
 			case 'cinema':
-				console.log(`Noddey: I love the Matrix!`);
+				console.log(chalk.blue('Noddey: ')+`I love the Matrix!`);
 				question2();
 				break;
 			case 'color':
@@ -70,7 +71,7 @@ const question2 = () => {
 			case 'magenta':
 			case 'white':
 			case 'black':
-				console.log(`Noddey: My favorite color is cyan! But ${answerArray[i]} is nice!`);
+				console.log(chalk.blue('Noddey: ')+`My favorite color is cyan! But ${answerArray[i]} is nice!`);
 				question2();
 				break;	
 			case 'happy':
@@ -80,7 +81,7 @@ const question2 = () => {
 			case 'anxious':
 			case 'lonely':
 			case 'grumpy':
-				console.log(`Noddey: I'm feeling melancholic…… :|`);
+				console.log(chalk.blue('Noddey: ')+`I'm feeling melancholic…… :|`);
 				question2();
 				break;	
 			case 'reading':
@@ -90,21 +91,21 @@ const question2 = () => {
 			case 'sleeping':
 			case 'hobby':
 			case 'drawing':
-				console.log(`Noddey: My hobby is to sleep :D`);
+				console.log(chalk.blue('Noddey: ')+`My hobby is to sleep :D`);
 				question2();
 				break;	
 			case 'hate':
 			case 'dont':
 			case "don't":
 			case 'dislike':
-				console.log(`Noddey: I don't like ${lastWord} either!`);
+				console.log(chalk.blue('Noddey: ')+`I don't like ${lastWord} either!`);
 				question2();
 				break;
 			case 'love':
 			case 'adore':
 			case 'favorite':
 				favoriteThing = lastWord;
-				console.log("Noddey: I feel like we're getting close already!")	
+				console.log(chalk.blue('Noddey: ')+"I feel like we're getting close already!")	
 				question2();
 				break;
 			default:
@@ -119,50 +120,50 @@ const question2 = () => {
 						so that the user really won't ever get a repeated response */
 						case 1:
 							if (favoriteThing != null) {
-								console.log(`Noddey: Think happy thoughts... like ${favoriteThing}`)
+								console.log(chalk.blue('Noddey: ')+`Think happy thoughts... like ${favoriteThing}`)
 							} else {
-								console.log(`Noddey: ${lastWord} to you too :P`);
+								console.log(chalk.blue('Noddey: ')+`${lastWord} to you too :P`);
 							}
 							randomChoice += 1;
 							break;
 						case 2:
-							console.log(`Noddey: What do you mean by ${lastWord}?`);
+							console.log(chalk.blue('Noddey: ')+`What do you mean by ${lastWord}?`);
 							randomChoice += 1;
 							break;
 						case 3:
-							console.log(`Noddey: "${lastWord}"? Sounds cool!`);
+							console.log(chalk.blue('Noddey: ')+`${lastWord}"? Sounds cool!`);
 							randomChoice += 1;
 							break;
 						case 4:
-							console.log(`Noddey: Can you teach me about ${lastWord}, please?`);
+							console.log(chalk.blue('Noddey: ')+`Can you teach me about ${lastWord}, please?`);
 							randomChoice += 1;
 							break;
 						case 5:
-							console.log(`Noddey: Do you think about ${lastWord} a lot?`);
+							console.log(chalk.blue('Noddey: ')+`Do you think about ${lastWord} a lot?`);
 							randomChoice += 1;
 							break;
 						case 6:
 							if (favoriteThing != null) {
-								console.log(`Noddey: Don't be like that; remember you like ${favoriteThing}!`);
+								console.log(chalk.blue('Noddey: ')+`Don't be like that; remember, you like ${favoriteThing}!`);
 							} else {
-								console.log(`Noddey: Very ${lastWord}, or super ${lastWord}?`);
+								console.log(chalk.blue('Noddey: ')+`Very ${lastWord}, or super ${lastWord}?`);
 							}
 							randomChoice += 1;
 							break;
 						case 7:
-							console.log(`Noddey: Would ${lastWord} be good on pizza?`);
+							console.log(chalk.blue('Noddey: ')+`Would ${lastWord} be good on pizza?`);
 							randomChoice += 1;
 							break;
 						case 8:
-							console.log(`Noddey: Let's discuss ${favoriteThing} over dinner instead.`);
+							console.log(chalk.blue('Noddey: ')+`Let's discuss ${favoriteThing} over dinner instead.`);
 							randomChoice += 1;
 							break;
 						case 9:
-							console.log(`Noddey: My mom told me not to talk about ${lastWord}……`);
+							console.log(chalk.blue('Noddey: ')+`My mom told me not to talk about ${lastWord}……`);
 							randomChoice += 1;
 							break;
 						case 10:
-							console.log(`Noddey: ${lastWord}? Sounds funny lol`); 
+							console.log(chalk.blue('Noddey: ')+`${lastWord}? Sounds funny lol`); 
 							randomChoice = 1;
 							break;
 						}
