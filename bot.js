@@ -33,7 +33,6 @@ const question2 = () => {
       	let lastWord = '';
 		lastWord = answerArray[answerArray.length - 1];
 
-
       	switch(answerArray[i]) { //favorite finder
       		case 'food':
       		case 'dish':
@@ -72,7 +71,17 @@ const question2 = () => {
 			case 'black':
 				console.log(`Noddey: My favorite color is cyan! But ${answerArray[i]} is nice!`);
 				question2();
-				break;		
+				break;	
+			case 'happy':
+			case 'sad':
+			case 'excited':
+			case 'depressed':
+			case 'anxious':
+			case 'lonely':
+			case 'grumpy':
+				console.log(`Noddey: I'm feeling melancholic…… :|`);
+				question2();
+				break;	
 			case 'hate':
 			case 'dont':
 			case "don't":
@@ -151,7 +160,8 @@ const question2 = () => {
       	}
 	}
 	
-	question2(); //serves as a re-loop for switch (randomChoice)
+	question2(); //serves as a re-loop for default block only since
+				 //other convo paths have their own `question2()` call
     })
   })
 }
