@@ -95,10 +95,6 @@ const question2 = () => {
 				console.log("Noddey: I feel like we're getting close already!")	
 				question2();
 				break;
-			case 'like':
-				console.log(`I've been kind of depressed lately...`);
-				question2();
-				break;
 			default:
 				if (i == answerArray.length - 1) { 	
 				/* if i==0, that means it has finished parsing all the other words;
