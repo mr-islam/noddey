@@ -38,23 +38,8 @@ const question2 = () => {
       		case 'dish':
       		case 'meal':
       		case 'eat':
-      			for (var j = answerArray.length - 1; j >= 0; j--) {
-					switch (answerArray[j]) {
-						case 'hate':
-						case 'dont':
-						case "don't":
-							console.log(`Noddey: I don't like ${lastWord} either!`);
-							talk();
-							break;
-						case 'favorite':
-						case 'tastiest':
-						case 'like':
-						default:
-							console.log('Noddey: My favorite food is lasagna!');
-							talk();
-							break;
-					}	
-				}
+				console.log('Noddey: My favorite food is lasagna!');
+				question2();
 				break;
 			case 'football':
 			case 'soccer':
@@ -86,9 +71,14 @@ const question2 = () => {
 			case 'black':
 				console.log(`Noddey: My favorite color is cyan! But ${answerArray[i]} is nice!`);
 				question2();
-				break;
-					}	
-				}
+				break;		
+			case 'hate':
+			case 'dont':
+			case "don't":
+				console.log(`Noddey: I don't like ${lastWord} either!`);
+				question2();
+				break;		
+				
 			default:
 				if (i == 0) { 	
 				/* if i==0, that means it has finished parsing all the other words;
