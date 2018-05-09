@@ -7,6 +7,11 @@ Kind of a scrappy logic that won't scale well to anyhting beyond it's current sc
 Currently only food based conversations are supported, but the groundwork has been laid to support *anything*
 
 ## Install
+Download the binary for your platform from the releases page [here](https://github.com/mr-islam/noddey/releases/tag/v1.0)
+
+Run the file in your terminal `./bot-[platform]`, replacing [platform] with the relevant filename for your platform. 
+
+## Dev
 
 1. Install node on your system
 2. Install the dependencies `readline` & `chalk`
