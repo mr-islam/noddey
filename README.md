@@ -4,7 +4,7 @@ Inspired from everyone's childhood favorite character, Noddy. Made for my Introd
 
 Kind of a scrappy logic that won't scale well to anyhting beyond it's current scope, but this was a good chance to get Node.js set up and explore some of its APIs.
 
-Currently only food based conversations are supported, but the groundwork has been laid to support *anything*
+Talk about movies, hobbies, colors, food, sports — or anything else. Noddey will entertain any thought.
 
 ## Install
 Download the binary for your platform from the releases page [here](https://github.com/mr-islam/noddey/releases/tag/v1.0)
