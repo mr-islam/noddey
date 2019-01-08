@@ -115,8 +115,8 @@ const question2 = () => {
 			case 'love':
 			case 'adore':
 			case 'favorite':
-				favoriteThing = lastWord;
-				console.log(chalk.blue('Noddey: ')+"I feel like we're getting close already!")	
+			case 'like':
+				console.log(chalk.blue('Noddey: ')+"I love talking to you!")	
 				question2();
 				break;
 			default:
@@ -130,11 +130,7 @@ const question2 = () => {
 						/* this is called 'random' choice but it is actually cycling through it
 						so that the user really won't ever get a repeated response till 10 goes*/
 						case 1:
-							if (favoriteThing != null) {
-								console.log(chalk.blue('Noddey: ')+`Think happy thoughts... like ${favoriteThing}`)
-							} else {
-								console.log(chalk.blue('Noddey: ')+`${lastWord} to you too :P`);
-							}
+							console.log(chalk.blue('Noddey: ')+`${lastWord} to you too :P`);
 							randomChoice += 1;
 							break;
 						case 2:
@@ -154,11 +150,7 @@ const question2 = () => {
 							randomChoice += 1;
 							break;
 						case 6:
-							if (favoriteThing != null) {
-								console.log(chalk.blue('Noddey: ')+`Let's discuss ${favoriteThing} over dinner instead.`);
-							} else {
-								console.log(chalk.blue('Noddey: ')+`Very ${lastWord}, or super ${lastWord}?`);
-							}
+							console.log(chalk.blue('Noddey: ')+`Very ${lastWord}, or super ${lastWord}?`);
 							randomChoice += 1;
 							break;
 						case 7:
