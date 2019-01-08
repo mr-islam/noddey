@@ -57,6 +57,8 @@ const question2 = () => {
 			case 'pingpong':
 			case 'pool':
 			case 'swimming':
+			case 'sports':
+			case 'sport':
 				console.log(chalk.blue('Noddey: ')+`I don't really like ${answerArray[i]}, I'm a squash person`);
 				question2();
 				break;
