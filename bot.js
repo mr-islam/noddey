@@ -140,7 +140,7 @@ const question2 = () => {
 							randomChoice += 1;
 							break;
 						case 3:
-							console.log(chalk.blue('Noddey: ')+`${lastWord}"? Sounds cool!`);
+							console.log(chalk.blue('Noddey: ')+`${lastWord}? Sounds cool!`);
 							randomChoice += 1;
 							break;
 						case 4:
