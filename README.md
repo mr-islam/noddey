@@ -18,3 +18,4 @@ Run the file in your terminal `./bot-[platform]`, replacing [platform] with the 
 3. Clone this repo
 4. `cd` to that folder on your terminal, and run `node bot.js`
 5. Finally, enjoy some company more engaging than this readme
+6. If you like, build using `pkg` npm package
