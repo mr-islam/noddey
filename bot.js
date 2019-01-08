@@ -35,6 +35,9 @@ const question2 = () => {
 		lastWord = answerArray[answerArray.length - 1];
 
 		switch(answerArray[i]) { //favorite finder
+			case '':
+				console.log(chalk.blue('Noddey: ')+ 'Say something!');
+				break;
 			case 'food':
 			case 'dish':
 			case 'meal':
