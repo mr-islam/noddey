@@ -18,11 +18,10 @@ function sleep(ms) {
 const question1 = () => {
   return new Promise((resolve, reject) => {
     rl.question('Hi, my name is Noddy… whats ur name? ', (answer) => {
-		var userName = answer
-		if (userName == '') {
+		if (answer == '') {
 			console.log(`Very nice to meet you, mystery person. Let's talk: `)
 		} else {
-			console.log(`Very nice to meet you, ${userName}. Let's talk: `)
+			console.log(`Very nice to meet you, ${answer}. Let's talk: `)
 		}
 		resolve();
     })
