@@ -128,7 +128,7 @@ const question2 = () => {
 
 					switch (randomChoice) {
 						/* this is called 'random' choice but it is actually cycling through it
-						so that the user really won't ever get a repeated response */
+						so that the user really won't ever get a repeated response till 10 goes*/
 						case 1:
 							if (favoriteThing != null) {
 								console.log(chalk.blue('Noddey: ')+`Think happy thoughts... like ${favoriteThing}`)
