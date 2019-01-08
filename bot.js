@@ -155,7 +155,7 @@ const question2 = () => {
 							break;
 						case 6:
 							if (favoriteThing != null) {
-								console.log(chalk.blue('Noddey: ')+`Don't be like that; remember, you like ${favoriteThing}!`);
+								console.log(chalk.blue('Noddey: ')+`Let's discuss ${favoriteThing} over dinner instead.`);
 							} else {
 								console.log(chalk.blue('Noddey: ')+`Very ${lastWord}, or super ${lastWord}?`);
 							}
@@ -166,7 +166,7 @@ const question2 = () => {
 							randomChoice += 1;
 							break;
 						case 8:
-							console.log(chalk.blue('Noddey: ')+`Let's discuss ${favoriteThing} over dinner instead.`);
+							console.log(chalk.blue('Noddey: ')+`Let's talk more about ${lastWord}`);
 							randomChoice += 1;
 							break;
 						case 9:
