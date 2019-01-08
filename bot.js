@@ -34,15 +34,15 @@ const question2 = () => {
       	let lastWord = '';
 		lastWord = answerArray[answerArray.length - 1];
 
-      	switch(answerArray[i]) { //favorite finder
-      		case 'food':
-      		case 'dish':
-      		case 'meal':
-      		case 'eat':
-      		case 'eating':
-      		case 'dinner':
-      		case 'lunch':
-      		case 'breakfast':
+		switch(answerArray[i]) { //favorite finder
+			case 'food':
+			case 'dish':
+			case 'meal':
+			case 'eat':
+			case 'eating':
+			case 'dinner':
+			case 'lunch':
+			case 'breakfast':
 				console.log(chalk.blue('Noddey: ')+ 'My favorite food is lasagna!');
 				question2();
 				break;
